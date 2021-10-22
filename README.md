@@ -30,3 +30,70 @@ On running the application Employees( id, fullname, designation) will be added a
   This package contains java classes and interfaces for handling(Service and Transaction) every request that has been passed from RestController . Some files in this package are AssetService, AssetServiceImpl, CategoryService, CategoryService Impl, EmployeeService, and EmployeeServiceImpl.
 - com.asset.springboot.controller :-
   This package contains all the RestController class files which will do mapping of request(POST, PUT and DELETE) by the help of methods. And the methods can have specific path with path variables which will be defined in these classes. Files in this package are AssetController and CategoryController.
+  
+# Usage & APIs
+
+- Get Employees (GET)
+  http://localhost:8080/employee
+
+- Get All Categories (GET)
+  http://localhost:8080/category
+
+- Create a category (POST)
+  http://localhost:8080/category/create
+  Params: {
+            "name":"categoryName",
+            "description": "description of category"
+          }
+
+- Update a category (PUT)
+  http://localhost:8080/category/update/{id}
+  Params: {
+            "name":"categoryName",
+            "description": "description of category"
+          }
+
+- View a single category (GET)
+  http://localhost:8080/category/view/{id}
+  
+- Delete a category (DELETE)
+  http://localhost:8080/category/delete/{id}
+
+  
+  ~ NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered ~
+
+- Create an asset 
+  Request Type: POST
+  http://localhost:8080/asset/create
+  Params: {
+            "name": "chair",
+            "purchaseDate" : "2010-08-12",
+            "conditionNote" : "arm rest broken",
+            "categoryId" : 1
+          }
+          
+- Get an asset by name :
+  Request Type : GET
+  http://localhost:8080/asset/getbyname/{name}
+
+- Update an asset :
+  Request Type : PUT
+  http://localhost:8080/asset/update/{id}
+  
+- Assign an asset :
+  Request Type : PUT
+  http://localhost:8080/asset/assign/{assetId}
+  Params: {
+            //enter the employee's id (fetch the employee id from [GET] http://localhost:8080/employee )
+              "assignedTo" : 1 
+          }
+          
+          
+- Recover an asset :
+  Request Type : PUT
+  http://localhost:8080/asset/recover/{assetId}
+  
+- Delete an asset :- 
+  Request Type: DELETE
+  http://localhost:8080/asset/delete/2
+  
