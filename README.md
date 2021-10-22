@@ -17,11 +17,11 @@ On running the application Employees( id, fullname, designation) will be added a
 - com.asset.springboot :-
   This contains the Application class with main method i.e AssetManagementSpringApplication.java .
 - com.asset.springboot.exception :-
-  This package contains all the exception(error) files such as :
-  1- AlreadyAssignedException : if an asset is already assigned, then this exception will occur.
-  2- CannotRemoveAssignedAsset : if an asset is assigned it cannot be deleted.
-  3- EmployeeNotFound : if wrong id for an employee is added while assigning asset.
-  4- ResourceNotFoundException : If entered asset id doesn't exist.
+  This package contains all the exception(error) files such as :-
+  - AlreadyAssignedException : if an asset is already assigned, then this exception will occur.
+  - CannotRemoveAssignedAsset : if an asset is assigned it cannot be deleted.
+  - EmployeeNotFound : if wrong id for an employee is added while assigning asset.
+  - ResourceNotFoundException : If entered asset id doesn't exist.
 - com.asset.springboot.model :- 
   This package all the model(bean) class files such as Employee.java, Category.java and Asset.java.
 - com.asset.springboot.repository :-
