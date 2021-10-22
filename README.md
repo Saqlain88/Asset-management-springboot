@@ -103,7 +103,7 @@ On running the application Employees( id, fullname, designation) will be added a
  - Step 1: Taking an employee with id = 5 to assign an asset.
  - Step 2: Create a category.
   - POST http://localhost:8080/category/create 
-    Parameter : {
+  - Parameter : {
                    "name":"furniture",
                     "description": "wooden/steel furnitures"
                  }
