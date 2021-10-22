@@ -60,7 +60,7 @@ On running the application Employees( id, fullname, designation) will be added a
   http://localhost:8080/category/delete/{id}
 
   
-  - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered`
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered`
 
 - Create an asset 
   Request Type: POST
