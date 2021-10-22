@@ -1,4 +1,4 @@
-# Asset-management-springboot
+# Asset Management Springboot
 
 Asset Management contains set of REST API for management of assets for any company.
 
@@ -60,7 +60,7 @@ On running the application Employees( id, fullname, designation) will be added a
   http://localhost:8080/category/delete/{id}
 
   
-  ~ NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered ~
+  ** NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered **
 
 - Create an asset 
   Request Type: POST
