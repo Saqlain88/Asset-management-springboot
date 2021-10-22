@@ -5,6 +5,7 @@ Asset Management contains set of REST API for management of assets for any compa
 # Technologies used
 - Java
 - Spring boot
+- SpringJPA
 - H2 Database
 
 # Tools used
@@ -60,7 +61,7 @@ On running the application Employees( id, fullname, designation) will be added a
   http://localhost:8080/category/delete/{id}
 
   
-![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered`
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) ` NOTE: For assignmentStatus  '0' is for available, '1' is for assigned and '2' is assigned for recovered`
 
 - Create an asset 
   Request Type: POST
@@ -97,3 +98,38 @@ On running the application Employees( id, fullname, designation) will be added a
   Request Type: DELETE
   http://localhost:8080/asset/delete/2
   
+# Example case:
+ 
+ - Step 1: Taking an employee with id = 5 to assign an asset.
+ - Step 2: Create a category.
+  - POST http://localhost:8080/category/create 
+    Parameter : {
+                   "name":"furniture",
+                    "description": "wooden/steel furnitures"
+                 }
+- Step 3: Create an asset:
+  - POST http://localhost:8080/asset/create
+  - Parameter: {
+                "name": "chair",
+                "purchaseDate" : "2020-08-12",
+                "conditionNote" : "hello there",
+                "categoryId" : 1,    
+                "assignmentStatus": 0
+                }
+
+- Step 4: Search category by name:
+  - GET http://localhost:8080/asset/getbyname/chair
+
+- Step 5: Assign it to employee with id = 5
+  - PUT http://localhost:8080/asset/assign/2
+  - Parameters: { "assignedTo" : 5 }
+
+- Step 6: Recover the assigned asset.
+  - PUT http://localhost:8080/asset/recover/2
+  
+- Step 7: Deleting the asset
+  - DELETE http://localhost:8080/asset/delete/2 
+# Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please make sure to update tests as appropriate.
